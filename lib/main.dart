@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'ui/products/products_manager.dart';
+import 'ui/products/product_detail_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,6 +28,11 @@ class MyApp extends StatelessWidget {
         ),
         body: const Center(
           child: Text('Welcome to MyShop'),
+        ),
+      ),
+      home: SafeArea( 
+        child: ProductDetailScreen( 
+        ProductsManager().items[0], 
         ),
       ),
     );
